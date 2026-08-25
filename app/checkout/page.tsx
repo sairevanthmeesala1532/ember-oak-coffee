@@ -7,7 +7,7 @@ import { useCartStore } from '../../store/useCartStore';
 
 export default function CheckoutPage() {
   const { items } = useCartStore();
-  const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const total = items.reduce((acc: number, item: any) => acc + item.price * item.quantity, 0);
 
   return (
     <div className="min-h-screen bg-[#121212] text-[#F5F5F4] font-sans">
@@ -20,7 +20,7 @@ export default function CheckoutPage() {
           {items.length === 0 ? (
             <p className="text-stone-400 text-sm">Your cart is currently empty.</p>
           ) : (
-            items.map(item => (
+            items.map((item: any) => (
               <div key={item.id} className="flex justify-between text-sm py-2 border-b border-[#2A2826]">
                 <span>{item.name} x {item.quantity}</span>
                 <span>₹{item.price * item.quantity}</span>

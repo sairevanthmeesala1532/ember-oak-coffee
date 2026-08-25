@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+  --bg-obsidian: #121212;
+  --surface-oak: #1C1917;
+  --accent-ember: #C2410C;
+  --text-cream: #F5F5F4;
+  --text-muted: #78716C;
+}
+
+body {
+  background-color: var(--bg-obsidian);
+  color: var(--text-cream);
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
